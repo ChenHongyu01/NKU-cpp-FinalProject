@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/Lang.png</file>
+        <file>assets/monster.png</file>
+        <file>assets/Ying.png</file>
+    </qresource>
+</RCC>

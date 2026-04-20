@@ -1,0 +1,28 @@
+# Qt 编译文件夹
+build/
+cmake-build-*/
+out/
+build-*
+
+# IDE 配置文件
+.idea/
+.vscode/
+*.user
+*.pro.user
+*.creator
+*.creator.user
+*.autosave
+
+# 可执行文件与库
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.pdb
+
+# 系统垃圾
+.DS_Store
+*.log
+*.tmp
