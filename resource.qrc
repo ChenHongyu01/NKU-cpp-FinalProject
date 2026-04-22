@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/Lang.png</file>
+        <file>assets/monster.png</file>
+        <file>assets/Ying.png</file>
+        <file>assets/monsterLeft.png</file>
+        <file>assets/monsterRight.png</file>
+        <file>assets/monsterLeft1.png</file>
+        <file>assets/monsterRight1.png</file>
+        <file>assets/Ying1.png</file>
+        <file>assets/Ying2.png</file>
+        <file>assets/bgm1.mp3</file>
+        <file>assets/bgm2.mp3</file>
+        <file>assets/bgm3.mp3</file>
+        <file>assets/dead.WAV</file>
+        <file>assets/dead.png</file>
+    </qresource>
+</RCC>
