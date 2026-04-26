@@ -22,6 +22,17 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Game_v2
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        game_constants.h
+        PacMan.h
+        PacMan.cpp
+        Monster.h
+        Monster.cpp
+        Bomb.h
+        Bomb.cpp
+        Player.h
+        Player.cpp
+        GameScene.h
+        GameScene.cpp
     )
 else()
     if(ANDROID)
@@ -35,7 +46,7 @@ else()
     endif()
 endif()
 
-# 链接 Multimedia 库
+# 新增：链接 Multimedia 库（音频播放必须）
 target_link_libraries(Game_v2 PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Multimedia

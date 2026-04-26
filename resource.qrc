@@ -14,5 +14,11 @@
         <file>assets/bgm3.mp3</file>
         <file>assets/dead.WAV</file>
         <file>assets/dead.png</file>
+        <file>assets/Lang1.png</file>
+        <file>assets/Lang2.png</file>
+        <file>assets/PacmanLeft.png</file>
+        <file>assets/PacmanRight.png</file>
+        <file>assets/bomb.png</file>
+        <file>assets/background.png</file>
     </qresource>
 </RCC>
