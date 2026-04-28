@@ -260,18 +260,17 @@ void GameScene::drawMenu() {
     stateTip->setFont(QFont("Microsoft YaHei", 18));
     stateTip->setDefaultTextColor(Qt::white);
     stateTip->setPos(SCREEN_WIDTH/2 - stateTip->boundingRect().width()/2, 140);
-    // 左右对称技能描述区
+    // 左右技能描述区
     const int DESC_X_LEFT = 120;
     const int DESC_X_RIGHT = SCREEN_WIDTH - 320;
     const int DESC_Y = 220;
 
-    // 左侧 Ying 技能
-    auto* yingDesc = addText("【Ying 技能】\n\nQ：能量100\n范围清屏\nE：1战技点\n加速冲刺");
+
+    auto* yingDesc = addText("【绯英 技能】\n\nQ：能量100\n范围清屏\nE：1战技点\n加速冲刺");
     yingDesc->setFont(QFont("Microsoft YaHei", 14));
     yingDesc->setDefaultTextColor(Qt::white);
     yingDesc->setPos(DESC_X_LEFT, DESC_Y);
 
-    // 右侧 Lang 技能
     auto* langDesc = addText("【银狼LV999 技能】\n\nQ：能量100\n召唤追踪炸弹\nE：1战技点\n召唤平移吃豆人");
     langDesc->setFont(QFont("Microsoft YaHei", 14));
     langDesc->setDefaultTextColor(Qt::white);

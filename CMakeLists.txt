@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(Game_v2 VERSION 0.1 LANGUAGES CXX)
+project(Game VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -19,7 +19,7 @@ set(PROJECT_SOURCES
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(Game_v2
+    qt_add_executable(Game
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         game_constants.h
@@ -36,18 +36,18 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     )
 else()
     if(ANDROID)
-        add_library(Game_v2 SHARED
+        add_library(Game SHARED
             ${PROJECT_SOURCES}
         )
     else()
-        add_executable(Game_v2
+        add_executable(Game
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
 # 新增：链接 Multimedia 库（音频播放必须）
-target_link_libraries(Game_v2 PRIVATE
+target_link_libraries(Game PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Multimedia
 )
@@ -55,7 +55,7 @@ target_link_libraries(Game_v2 PRIVATE
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.Game_v2)
 endif()
-set_target_properties(Game_v2 PROPERTIES
+set_target_properties(Game PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -64,12 +64,12 @@ set_target_properties(Game_v2 PROPERTIES
 )
 
 include(GNUInstallDirs)
-install(TARGETS Game_v2
+install(TARGETS Game
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(Game_v2)
+    qt_finalize_executable(Game)
 endif()
